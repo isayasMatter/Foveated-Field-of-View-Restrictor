@@ -33,7 +33,7 @@ opaque.  The inner radius of the circular cut-off iscalculated using the followi
  
  ### Gaze signal smoothing and filtering
  
-The movement of the foveated restrictor must, ideally, be smooth and have low latency inorder to be imperceptible by the user. However, eye tracking signals contain inherent noise (jitter) and various other signal artifacts that cause sudden spikes in the signal. These noise can make the restrictor jittery, and the spikes can create cause jumps in the restrictor. To avoid this, we must filter and smooth the signal. Our code includes implementations of low pass filter to remove noise and two types of smoothing agorithms, running average smoothing and spring damping, to remove sudden spikes from the signal. The filtering and smoothing steps can introduce perceptible delay into the signal and must be used conservatively.
+The movement of the foveated restrictor must, ideally, be smooth and have low latency in order to be imperceptible by the user. However, eye tracking signals contain inherent noise (jitter) and various other signal artifacts that cause sudden spikes in the signal. The raw signal's noise can make the restrictor jittery, and the spikes can cause jumps in the restrictor. To avoid this, we must filter and smooth the signal. Our code includes implementations of a low pass filter to remove high frequency noise and two types of smoothing agorithms, running average smoothing and spring damping, to remove sudden spikes from the signal. The filtering and smoothing steps can introduce perceptible delay into the signal and must be used conservatively.
 
 
  
